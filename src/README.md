@@ -37,7 +37,7 @@
 <html>
     <head>
         <title>EasySPA Example</title>
-        <script defer src="src"></script>
+        <script defer src="https://cdn.jsdelivr.net/gh/inopytech/SimpleSPA@main/src/index.cdn.min.js"></script>
     </head>
     <body>
         <button to="nextPage.html" click>
