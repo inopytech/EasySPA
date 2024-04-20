@@ -1,4 +1,4 @@
-# EasySPA
+# SimpleSPA
 
 > Easily add SPA to your app without Vue and React!
 
@@ -6,8 +6,8 @@
 
 1. Install via NPM
 
-- Run `npm install easyspa`.
-- Add `import { easyspa } from 'inopytech/easyspa'` to your main JS.
+- Run `npm install simple`.
+- Add `import { simplespa } from 'inopytech/simple'` to your main JS.
 
 2. Use via CDN
 
