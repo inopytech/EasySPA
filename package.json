@@ -1,0 +1,8 @@
+{
+  "name": "@inopytech/simplespa",
+  "version": "1.0.0",
+  "description": "Easily add SPA to your app without Vue and React!",
+  "main": "index.min.js",
+  "author": "Inopy",
+  "license": "MIT"
+}
