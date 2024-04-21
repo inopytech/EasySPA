@@ -1,10 +1,8 @@
-const observer = new MutationObserver((mutations) => {
+new MutationObserver((mutations) => {
     for (const mutation of mutations) {
         updateElementsBase();
     }
-});
-
-observer.observe(document.body, {
+}).observe(document.body, {
     childList: true,
     attributes: true,
     subtree: true
@@ -48,6 +46,22 @@ async function updateElementsBase() {
 
 }
 
+async function reloadScripts() {
+    const scripts = document.querySelectorAll('script[src]');
+    for (const script of scripts) {
+        const url = script.src;
+        const response = await fetch(url, {mode: 'no-cors'});
+        if (response.ok) {
+            const scriptContent = await response.text();
+            const newScript = document.createElement('script');
+            newScript.textContent = scriptContent;
+            script.parentNode.replaceChild(newScript, script);
+        } else {
+            console.error('Fa1iled to load script:', url);
+      }
+    }
+}
+
 async function setSPAContent(url) {
     let response = await fetch(url);
 
@@ -62,5 +76,6 @@ async function setSPAContent(url) {
         window.history.pushState({}, url.split(window.origin), url)
 
         updateElementsBase();
+        reloadScripts();
     }
 }
