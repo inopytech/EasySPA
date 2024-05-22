@@ -1,3 +1,7 @@
+# BETA!
+> **There may be problems or errors. It is not recommended to use it in production!**
+
+
 # SimpleSPA
 
 > Easily add SPA to your app without Vue and React!
