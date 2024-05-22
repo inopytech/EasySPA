@@ -6,9 +6,7 @@
 
 1. Install via NPM
 
-- Run `npm install @inopytech/simplespa`.
-- Add `import { initSPA } from '@inopytech/simplespa'` to your main JS.
-- Run `initSPA()` function.
+- soon...
 
 2. Use via CDN
 
@@ -28,8 +26,8 @@
 
 ### Mouse leave
 
-- Add **to** attribute to your HTML element, with URL for SPA navigate.
-- Add **leave** attribute to your HTML element.
+- Add **`to`** attribute to your HTML element, with URL for navigate.
+- Add **`leave`** attribute to your HTML element.
 
 ## Example:
 
@@ -37,14 +35,48 @@
 <html>
     <head>
         <title>EasySPA Example</title>
-        <script defer src="https://cdn.jsdelivr.net/gh/inopytech/SimpleSPA@main/src/index.cdn.min.js"></script>
+        <script defer src="src"></script>
     </head>
     <body>
-        <button to="nextPage.html" click>
-            next
-        </button>
+        <div id="root">
+            <button to="nextPage.html" click>
+                Click to Next
+            </button>
+            
+            <button to="nextPage.html" enter>
+                Mouse enter to Next
+            </button>
+
+            <button to="nextPage.html" leave>
+                Mouse leave to Next
+            </button>
+        </div>
     </body>
 </html>
+```
+
+## Config
+
+The configuration takes place via the **`window.simpleSPAConfig`** variable.
+
+### Configuration variables
+
+| Variable                  | Default       | Description                                        |
+| ------------------------- | ------------- | -------------------------------------------------- |
+| **`rootId`**              | **`'root'`**  | ID of the `root div`                               | 
+| **`removeRootId`**        | **`false`**   | Removes `id` attribute after loading.              |
+| **`replaceTitle`**        | **`true`**    | Updates `<title>` tag.                             |
+| **`removeSPAAttributes`** | **`true`**    | Removes `to` and trigger attributes after loading. |
+
+### Default config object
+
+```js
+const config = {
+    rootId: 'root',
+    removeRootId: false,
+    removeSPAAttributes: true,
+    replaceTitle: true
+};
 ```
 
 ## License
