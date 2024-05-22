@@ -10,7 +10,7 @@
 
 2. Use via CDN
 
-- Add `<script defer src='https://cdn.jsdelivr.net/gh/inopytech/SimpleSPA@main/src/index.cdn.min.js'></script>` to your HEAD tag.
+- Add `<script defer src='https://cdn.jsdelivr.net/gh/inopytech/SimpleSPA@main/src/index.min.js'></script>` to your HEAD tag.
 
 ## Using:
 
@@ -35,7 +35,7 @@
 <html>
     <head>
         <title>EasySPA Example</title>
-        <script defer src="src"></script>
+        <script defer src="https://cdn.jsdelivr.net/gh/inopytech/SimpleSPA@main/src/index.min.js"></script>
     </head>
     <body>
         <div id="root">
