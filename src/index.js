@@ -85,8 +85,7 @@ async function setSPAContent(url) {
         }
         
         document.getElementById(config.rootId).replaceWith(rootDiv);
-        window.history.pushState({}, url.split(window.location.origin), window.location.origin + url)
-        
+        window.history.pushState({}, url.split(window.location), window.location.origin + '/' + url)
 
         updateElementsBase();
     }
